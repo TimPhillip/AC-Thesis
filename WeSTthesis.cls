@@ -1,4 +1,3 @@
-%*******************************************************************************
 %  WeSTthesis.cls
 %
 %  LaTeX document class for seminar papers, proposals, bachelor's theses, and
@@ -167,32 +166,42 @@
     \begin{center}
       \renewcommand{\arraystretch}{.8}
       \begin{tabular}{c p{2.25cm} c}
- 	  	  \includegraphics[height=.9cm]{logos/uni-logo-color}
+ 	  	  \includegraphics[height=1cm, trim={1cm 1.8cm 1cm 1.8cm},clip]{logos/unistuttgart_logo_englisch}
         &
         \empty
         &
-        \includegraphics[height=.9cm]{logos/institute-logo-color}
+        \includegraphics[height=1cm]{logos/AC-logo}
 	      \\
         \hspace{.71cm}
-        \begin{footnotesize}
-          \ifenglish%
-            Faculty 4: Computer Science
-          \else
-            Fachbereich 4: Informatik
-          \fi
-        \end{footnotesize}
+        \ifenglish%
+            \begin{footnotesize}
+              Faculty 5: Computer Science, Electrical Engineering
+            \end{footnotesize}
+            \\
+            \begin{footnotesize}
+              and Information Technology
+            \end{footnotesize}
+        \else
+            \begin{footnotesize}
+              Fakultät 5: Informatik, Elektrotechnik und
+            \end{footnotesize}
+            \\
+            \begin{footnotesize}
+              Informationstechnik
+            \end{footnotesize}
+        \fi
         &
         \empty
         &
         \begin{footnotesize}
-          Institute for Web Science
+          Department of
         \end{footnotesize}
         \\
         &
         \empty
         &
         \begin{footnotesize}
-          and Technologies
+          Analytic Computing
         \end{footnotesize}
       \end{tabular}\\
     \renewcommand{\arraystretch}{1.0} %reset arraystretch to default
@@ -316,12 +325,12 @@
         \empty & \secondreviewerinfo\\[2cm]
       \fi
       \ifdate%
-        Koblenz, \today &
+        Stuttgart, \today &
       \else
         \ifenglish%
-          Koblenz, \monthword{} \the\year &
+          Stuttgart, \monthword{} \the\year &
         \else
-          Koblenz, im \monthword{} \the\year &
+          Stuttgart, im \monthword{} \the\year &
         \fi
       \fi
     \end{tabular}
@@ -436,7 +445,7 @@
             \begin{itemize}
             	\item If you would like us to contact you for the graduation ceremony, 
                 \item[] please provide your personal E-mail address: \dotfill
-                \item If you would like us to send you an invite to join the WeST Alumni 
+                \item If you would like us to send you an invite to join the AC Alumni 
                 \item[] and Members group on LinkedIn, please provide your LinkedIn ID : \dotfill
             \end{itemize}
             

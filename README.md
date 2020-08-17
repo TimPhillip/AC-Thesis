@@ -1,5 +1,7 @@
-# LaTeX document class for seminar papers, proposals, bachelor's theses, and master's theses written at the Institute for Web Science and Technologies
-The document class "WeSTthesis.cls" is based on "cgBA.cls" which was provided by the [Research Group Mueller](http://www.uni-koblenz-landau.de/koblenz/fb4/institute/icv/agmueller). It is oriented at the style guides provided by the examination board of the [Faculty of Computer Science](http://www.uni-koblenz-landau.de/campus-koblenz/fb4) at the [University of Koblenz-Landau](http://www.uni-koblenz-landau.de/). The document class provides a cover page template, a statement on source usage and publication, and some basic text formatting. The file [example.tex](example.tex) contains a template for creating documents using this document class.
+# LaTeX document class for seminar papers, proposals, bachelor's theses, and master's theses written at the Department of Analytic Computing
+The document class "WeSTthesis.cls" is based on "cgBA.cls" which was provided by the [Research Group Mueller](http://www.uni-koblenz-landau.de/koblenz/fb4/institute/icv/agmueller). It is oriented at the style guides provided by the examination board of the [Faculty of Computer Science](http://www.uni-koblenz-landau.de/campus-koblenz/fb4) at the [University of Koblenz-Landau](http://www.uni-koblenz-landau.de/).
+
+The document class provides a cover page template, a statement on source usage and publication, and some basic text formatting. The file [example.tex](example.tex) contains a template for creating documents using this document class.
 
 ## Usage
 The following command is used to include the document class in the .tex document.
