@@ -48,6 +48,16 @@
 
 \newif\ifframes
 
+\newif\ifagreelibrary
+
+\newif\ifagreeinternet
+
+\newif\ifagreetextcc
+
+\newif\ifagreegnu
+
+\newif\ifagreedatacc
+
 
 %--- Initialization of variables -----------------------------------------------
 
@@ -141,6 +151,31 @@
 
 \newcommand{\englishabstract}[1]{\def\englishabstract{#1}}
 \newcommand{\germanabstract}[1]{\def\germanabstract{#1}}
+
+
+\newcommand{\declarationchoices}[5]{
+
+\if#1Y
+\agreelibrarytrue
+\fi
+
+\if#2Y
+\agreeinternettrue
+\fi
+
+\if#3Y
+\agreetextcctrue
+\fi
+
+\if#4Y
+\agreegnutrue
+\fi
+
+\if#5Y
+\agreedatacctrue
+\fi
+
+}
 
 \newcommand{\monthword}{%
   \ifenglish%
@@ -383,37 +418,157 @@
               \fi
               \\[.5cm]
               \ifenglish%
-                I agree to have this thesis published in the library.& \empty & $\square$ & $\square$\\[.5cm]
+                I agree to have this thesis published in the library.& \empty & 
+                \ifagreelibrary
+                  $\text{\rlap{$\times$}}\square$ 
+                \else 
+                  $\square$
+                \fi
+                &
+                \ifagreelibrary
+                   $\square$
+                \else 
+                  $\text{\rlap{$\times$}}\square$
+                \fi
+                \\[.5cm]
               \else
                 Mit der Einstellung dieser Arbeit in die Bibliothek& \empty & \empty & \empty\\
-                bin ich einverstanden. & \empty & $\square$ & $\square$\\[.5cm]
+                bin ich einverstanden. & \empty & 
+                \ifagreelibrary
+                  $\text{\rlap{$\times$}}\square$ 
+                \else 
+                  $\square$
+                \fi
+                &
+                \ifagreelibrary
+                   $\square$
+                \else 
+                  $\text{\rlap{$\times$}}\square$
+                \fi
+                \\[.5cm]
               \fi
               \ifenglish%
-                I agree to have this thesis published on the Web.& \empty & $\square$ & $\square$\\[.5cm]
+                I agree to have this thesis published on the Web.& \empty & 
+                \ifagreeinternet
+                  $\text{\rlap{$\times$}}\square$ 
+                \else 
+                  $\square$
+                \fi
+                &
+                \ifagreeinternet
+                   $\square$
+                \else 
+                  $\text{\rlap{$\times$}}\square$
+                \fi
+                \\[.5cm]
               \else
                 Der Ver\"offentlichung dieser Arbeit im Internet& \empty & \empty & \empty\\
-                stimme ich zu.& \empty & $\square$ & $\square$\\[.5cm]
+                stimme ich zu.& \empty & 
+                \ifagreeinternet
+                  $\text{\rlap{$\times$}}\square$ 
+                \else 
+                  $\square$
+                \fi
+                &
+                \ifagreeinternet
+                   $\square$
+                \else 
+                  $\text{\rlap{$\times$}}\square$
+                \fi
+                \\[.5cm]
               \fi
               \ifenglish%
                 The thesis text is available under a Creative Commons  & \empty & \empty & \empty\\
-                License (CC BY-SA 4.0). & \empty & $\square$ & $\square$\\[.5cm]
+                License (CC BY-SA 4.0). & \empty &
+                \ifagreetextcc
+                  $\text{\rlap{$\times$}}\square$ 
+                \else 
+                  $\square$
+                \fi
+                &
+                \ifagreetextcc
+                   $\square$
+                \else 
+                  $\text{\rlap{$\times$}}\square$
+                \fi
+                \\[.5cm]
               \else
                 Der Text dieser Arbeit ist unter einer Creative & \empty & \empty & \empty \\
-                Commons Lizenz (CC BY-SA 4.0) verf\"ugbar. & \empty & $\square$ & $\square$\\[.5cm]
+                Commons Lizenz (CC BY-SA 4.0) verf\"ugbar. & \empty &
+                \ifagreetextcc
+                  $\text{\rlap{$\times$}}\square$ 
+                \else 
+                  $\square$
+                \fi
+                &
+                \ifagreetextcc
+                   $\square$
+                \else 
+                  $\text{\rlap{$\times$}}\square$
+                \fi
+                \\[.5cm]
               \fi
               \ifenglish%
                 The source code is available under a GNU General Public & \empty & \empty & \empty\\
-                License (GPLv3). & \empty & $\square$ & $\square$\\[.5cm]
+                License (GPLv3). & \empty &
+                \ifagreegnu
+                  $\text{\rlap{$\times$}}\square$ 
+                \else 
+                  $\square$
+                \fi
+                &
+                \ifagreegnu
+                   $\square$
+                \else 
+                  $\text{\rlap{$\times$}}\square$
+                \fi
+                \\[.5cm]
               \else
                 Der Quellcode ist unter einer GNU General Public & \empty & \empty & \empty\\
-                License (GPLv3) verf\"ugbar. & \empty & $\square$ & $\square$\\[.5cm]
+                License (GPLv3) verf\"ugbar. & \empty &
+                \ifagreegnu
+                  $\text{\rlap{$\times$}}\square$ 
+                \else 
+                  $\square$
+                \fi
+                &
+                \ifagreegnu
+                   $\square$
+                \else 
+                  $\text{\rlap{$\times$}}\square$
+                \fi
+                \\[.5cm]
               \fi
               \ifenglish%
                 The collected data is available under a Creative Commons & \empty & \empty & \empty\\
-                License (CC BY-SA 4.0). & \empty & $\square$ & $\square$\\[.5cm]
+                License (CC BY-SA 4.0). & \empty &
+                \ifagreedatacc
+                  $\text{\rlap{$\times$}}\square$ 
+                \else 
+                  $\square$
+                \fi
+                &
+                \ifagreedatacc
+                   $\square$
+                \else 
+                  $\text{\rlap{$\times$}}\square$
+                \fi
+                \\[.5cm]
               \else
                 Die erhobenen Daten sind unter einer Creative & \empty & \empty & \empty\\
-                Commons Lizenz (CC BY-SA 4.0) verf\"ugbar. & \empty & $\square$ & $\square$\\
+                Commons Lizenz (CC BY-SA 4.0) verf\"ugbar. & \empty &
+                \ifagreedatacc
+                  $\text{\rlap{$\times$}}\square$ 
+                \else 
+                  $\square$
+                \fi
+                &
+                \ifagreedatacc
+                   $\square$
+                \else 
+                  $\text{\rlap{$\times$}}\square$
+                \fi
+                \\
               \fi
             \end{tabular}\\[2cm]
             \end{center}
